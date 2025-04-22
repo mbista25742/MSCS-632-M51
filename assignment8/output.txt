@@ -1,0 +1,19 @@
+% Query: Who are the children of john?
+?- child(X, john).
+% Expected: X = mary ; X = sam.
+
+% Query: Who are the siblings of mary?
+?- sibling(mary, X).
+% Expected: X = sam.
+
+% Query: Who are the grandchildren of john?
+?- grandparent(john, X).
+% Expected: X = alice ; X = bob ; X = tom.
+
+% Query: Is bob a cousin of tom?
+?- cousin(bob, tom).
+% Expected: true.
+
+% Query: Who are all descendants of john?
+?- descendant(X, john).
+% Expected: X = mary ; X = sam ; X = alice ; X = bob ; X = tom.
